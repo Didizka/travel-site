@@ -1,5 +1,9 @@
 .large-hero {
+    border-bottom: 10px solid $mainBlue;
     position: relative;
+    &__image {
+        display: block;
+    }
     &__text-content {
         /*    Display on top of the picture in .large-hero div */
         position: absolute;
@@ -11,25 +15,40 @@
         width: 100%;
         text-align: center;
     }
+    
     &__title {
         font-weight: 300;
         color: $mainBlue;
-        font-size: 4.8rem;
+        font-size: 2.4rem;
         margin: 0;
         /*        rem = multiplies the default HTML font-size, which is normally 16px, unless the user has adjusted it */
+        
+        @mixin atSmall {
+            font-size: 4.8em;
+        }
     }
+    
     &__subtitle {
         font-weight: 300;
         color: $mainBlue;
-        font-size: 2.9rem;
+        font-size: 1.5rem;
         margin-top: 0;
+        
+        @mixin atSmall {
+            font-size: 2.9rem;
+        }
     }
+    
     &__description {
         color: white;
-        font-size: 1.875rem;
+        font-size: 1.1rem;
         font-weight: 100;
         text-shadow: 2px 2px 0 rgba(0, 0, 0, .1);
         max-width: 30rem;
         margin: 0 auto;
+        
+        @mixin atSmall {
+            font-size: 1.875rem;
+        }
     }
 }

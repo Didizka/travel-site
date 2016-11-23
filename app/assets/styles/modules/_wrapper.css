@@ -1,0 +1,22 @@
+/* Add this class into any main section of your page */
+
+.wrapper {
+    /*    remove padding-right from last child element in a row, by giving it margin-right negative value, letting it extend the parent and then hide this overflow => instead of :last-of-type selector */
+    overflow: hidden;
+    padding: 0 20px;
+    max-width: 1240px; /* 1200px + 2 x 20px due to * box-sizing */
+    margin: 0 auto;
+    &--medium {
+        max-width: 976px;
+    }
+    /*    Removes padding from any nested wrapper     */
+    .wrapper {
+        padding: 0;
+    }
+    &--b-margin {
+        margin-bottom: 1rem;
+        @mixin atSmall {
+            margin-bottom: 3.875rem;
+        }
+    }
+}

@@ -6,3 +6,16 @@ body {
 img {
     max-width: 100%;
 }
+
+
+/* Eliminate all paddings from box-size calculation */
+
+* {
+    box-sizing: border-box;
+}
+
+
+/* Cancel browser default blue color for links for the whole website */
+a {
+    color: $mainOrange;
+}
